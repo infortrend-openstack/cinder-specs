@@ -82,8 +82,37 @@ None
 Other deployer impact
 ---------------------
 
+The driver can be configured with the following parameters in cinder.conf:
+* volume_driver - 
+* volume_backend_name - 
+* san_ip - IP to CLI management interface on Infortrend - 
+* san_password - 
+* infortrend_pools_name - 
+* infortrend_slots_a_channels_id - 
+* infortrend_slots_b_channels_id - 
+* infortrend_tiering - 
+* infortrend_iscsi_mcs - 
+* infortrend_fc_multipath - 
 
 
+
+Developer impact
+----------------
+
+None
+
+Implementation
+==============
+
+Assignee(s)
+-----------
+
+Primary assignee:
+  James Tsai
+
+Other contributors:
+  Jessy Lee
+  RyanC 
 
 
 
