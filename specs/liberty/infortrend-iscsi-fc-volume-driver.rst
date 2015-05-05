@@ -114,37 +114,25 @@ Jessy Lee, RyanC
 Work Items
 ----------
 Common driver:
- common_cli.py
-
- cli_factory.py
-
- Driver code common to FC and ISCSI.
-
- Done
+   common_cli.py
+   cli_factory.py
+   Driver code common to FC and ISCSI.
+   Done
 
 iSCSI driver:
- infortrend_iscsi_cli.py
-
- Driver code specific to ISCSI.
-
- In progress.  Code complete, but Driver cert in progress.
-
+   infortrend_iscsi_cli.py
+   Driver code specific to ISCSI.
+   In progress.  Code complete, but Driver cert in progress.
 
 FC driver:
- infortrend_fc_cli.py
-
- Driver code specific to FC.
-
- In progress.  Code complete, but Driver cert in progress.
-
+   infortrend_fc_cli.py
+   Driver code specific to FC.
+   In progress.  Code complete, but Driver cert in progress.
 
 Unit test:
- test_infortrend_common.py
-
- test_infortrend_cli.py
-
- Done
-
+   test_infortrend_common.py
+   test_infortrend_cli.py
+   Done
 
 CI environment will be setup, one for each driver type.
 
