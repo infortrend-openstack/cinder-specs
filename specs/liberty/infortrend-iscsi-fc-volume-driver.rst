@@ -22,7 +22,8 @@ Proposed change
 ===============
 
 The new driver will add support for Infortrend DS storage products as backend storage in Cinder. 
-The driver supports the following APIs:
+The driver supports the following APIs:  
+
 * Volume Create/Delete  
 
 * Volume Attach/Detach  
