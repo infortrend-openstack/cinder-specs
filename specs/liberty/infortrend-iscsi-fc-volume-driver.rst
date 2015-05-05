@@ -106,11 +106,11 @@ Assignee(s)
 -----------
 
 Primary assignee:
-* James Tsai
+James Tsai
 
 Other contributors:
-* Jessy Lee
-* RyanC 
+Jessy Lee
+RyanC 
 
 Work Items
 ----------
