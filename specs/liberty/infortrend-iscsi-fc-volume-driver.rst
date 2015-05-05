@@ -83,18 +83,16 @@ Other deployer impact
 ---------------------
 
 The driver can be configured with the following parameters in cinder.conf:
-* volume_driver - 
-* volume_backend_name - 
-* san_ip - IP to CLI management interface on Infortrend - 
-* san_password - 
-* infortrend_pools_name - 
-* infortrend_slots_a_channels_id - 
-* infortrend_slots_b_channels_id - 
-* infortrend_tiering - 
-* infortrend_iscsi_mcs - 
-* infortrend_fc_multipath - 
-
-
+* volume_driver - choose iscsi or fc driver
+* volume_backend_name - indicate this backend's property
+* san_ip - IP to CLI management interface on Infortrend
+* san_password - RAID password for better security concern
+* infortrend_pools_name - multiple pools support
+* infortrend_slots_a_channels_id - channel number used for openstack in slot A controller
+* infortrend_slots_b_channels_id - channel number used for openstack in slot B controller
+* infortrend_tiering - indicate the number of tiering
+* infortrend_iscsi_mcs - enable iscsi mcs flag
+* infortrend_fc_multipath - enable fc multipath flag
 
 Developer impact
 ----------------
@@ -108,11 +106,60 @@ Assignee(s)
 -----------
 
 Primary assignee:
-  James Tsai
+* James Tsai
 
 Other contributors:
-  Jessy Lee
-  RyanC 
+* Jessy Lee
+* RyanC 
 
+Work Items
+----------
+Common driver:
+ common_cli.py
+ cli_factory.py
+ Driver code common to FC and ISCSI.
+ Done
+
+iSCSI driver:
+ infortrend_iscsi_cli.py
+ Driver code specific to ISCSI.
+ In progress.  Code complete, but Driver cert in progress.
+
+FC driver:
+ infortrend_fc_cli.py
+ Driver code specific to FC.
+ In progress.  Code complete, but Driver cert in progress.
+
+Unit test:
+ test_infortrend_common.py
+ test_infortrend_cli.py
+ Done
+
+CI environment will be setup, one for each driver type.
+
+Dependencies
+============
+
+None
+
+Testing
+=======
+
+Test using existing test infrastructure according to openstack cinder driver submission steps.
+
+Documentation Impact
+====================
+
+Support Matrix needs to be updated to include Infortrend support.
+https://wiki.openstack.org/wiki/CinderSupportMatrix
+
+Block storage documentation needs to be updated to include Infortrend volume driver
+information in the volume drivers section.
+http://docs.openstack.org/
+
+References
+==========
+
+None
 
 
