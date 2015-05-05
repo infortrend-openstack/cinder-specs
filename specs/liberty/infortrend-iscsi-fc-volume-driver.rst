@@ -2,7 +2,7 @@
 Cinder volume driver for Infortrend EonStor DS storage
 ======================================================
 
-Include the URL of your launchpad blueprint:R
+Include the URL of your launchpad blueprint:
 
 https://blueprints.launchpad.net/cinder/+spec/infortrend-iscsi-fc-volume-driver
 
