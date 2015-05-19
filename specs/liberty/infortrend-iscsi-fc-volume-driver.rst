@@ -103,16 +103,19 @@ The driver can be configured with the following parameters in cinder.conf:
 
 * infortrend_pools_name - multiple pools support  
 
+* infortrend_cli_path - The Infortrend CLI absolute path
+
+* infortrend_cli_timeout - Default timeout for CLI copy operations in minutes.
+
 * infortrend_slots_a_channels_id - channel number used for openstack in slot A controller  
 
 * infortrend_slots_b_channels_id - channel number used for openstack in slot B controller  
 
+* infortrend_provisioning - enable thin provisioning flag
+
 * infortrend_tiering - indicate the number of tiering  
 
-* infortrend_iscsi_mcs - enable iscsi mcs flag  
-
-* infortrend_fc_multipath - enable fc multipath flag  
-
+* use_multipath_for_image_xfer - enable iscsi multipath flag
 
 Developer impact
 ----------------
