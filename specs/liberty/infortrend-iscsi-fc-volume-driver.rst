@@ -115,7 +115,7 @@ The driver can be configured with the following parameters in cinder.conf:
 
 * infortrend_tiering - indicate the number of tiering  
 
-* use_multipath_for_image_xfer - enable iscsi multipath flag
+* use_multipath_for_image_xfer - enable iscsi multipath(MCS) flag
 
 Developer impact
 ----------------
@@ -129,10 +129,10 @@ Assignee(s)
 -----------
 
 Primary assignee:  
-James Tsai
+  James Tsai
 
 Other contributors:  
-Jessy Lee, RyanC  
+  Jessy Lee, RyanC  
 
 Work Items
 ----------
@@ -141,7 +141,7 @@ Work Items
    common_cli.py  
    cli_factory.py  
    Driver code common to FC and ISCSI.  
-   Done  
+   In progress.  Code complete, but Driver cert in progress.    
 
 * iSCSI driver:  
    infortrend_iscsi_cli.py  
@@ -156,14 +156,17 @@ Work Items
 * Unit test:  
    test_infortrend_common.py  
    test_infortrend_cli.py  
-   Done  
+   In progress.  Code complete, but Driver cert in progress.    
 
-CI environment will be setup, one for each driver type.
+CI environment already setup, one for each driver type.
 
 Dependencies
 ============
 
-None
+raidcmd_ESDS10.jar (a.k.a EonStorDS CLI) download URL:
+
+https://github.com/infortrend-openstack/eonstor-ds-cinder-driver/releases
+
 
 Testing
 =======
@@ -184,5 +187,3 @@ References
 ==========
 
 None
-
-
